@@ -5,13 +5,24 @@ convertidor en python, javascript, bash para isntalar convertdor de xlsx a json 
 ----
 
 
-Convert Excel Cell to JSON
+##  Convert Excel Cell to JSON
 1
 2
 3
 Transforming Excel data into JSON format is useful for APIs, web apps, and data migration. You can achieve this either through programming libraries or online tools that work directly in your browser without uploading sensitive data.
 
 Using Python (pandas)
+
+```
+import pandas as pd
+import json
+# Read Excel file
+df = pd.read_excel('data.xlsx')
+# Convert to JSON format
+json_data = df.to_json(orient='records')
+# Pretty print JSON
+print(json.dumps(json.loads(json_data), indent=2))
+```
 
 This method is ideal for automation and large datasets.
 
