@@ -13,7 +13,7 @@ Transforming Excel data into JSON format is useful for APIs, web apps, and data 
 
 Using Python (pandas)
 
-```
+```py
 import pandas as pd
 import json
 # Read Excel file
@@ -57,8 +57,13 @@ Steps:
 Install SheetJS
 
 npm install xlsx
+
+
 Copy
 Convert Excel to JSON
+
+
+```
 
 import * as XLSX from 'xlsx';
 
@@ -69,6 +74,9 @@ const sheet = workbook.Sheets[workbook.SheetNames[0]];
 const json = XLSX.utils.sheet_to_json(sheet);
 
 console.log(JSON.stringify(json, null, 2));
+
+```
+
 Copy
 Check Data Types – Numbers remain numeric, booleans stay boolean, and empty cells become empty strings.
 
